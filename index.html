@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergolette | Motorized Pergolas &amp; Outdoor Living — Powhatan, VA</title>
+<meta name="description" content="Custom motorized louvered pergolas, designed and installed by Pergolette. Serving Virginia, Maryland, and North Carolina from our home base in Powhatan, VA.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --graphite: #24262A;
+    --graphite-2: #2E3136;
+    --graphite-3: #3A3D42;
+    --ivory: #F3EDE4;
+    --ivory-2: #E7DFCF;
+    --ink: #1C1D1F;
+    --paper: #FAF7F1;
+    --amber: #D98C3D;
+    --amber-dark: #B5701F;
+    --amber-soft: rgba(217,140,61,0.18);
+    --teal: #4F7B82;
+    --line-dark: rgba(250,247,241,0.14);
+    --line-light: rgba(28,29,31,0.12);
+
+    --font-display: 'Archivo Expanded', sans-serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    --maxw: 1180px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    font-family: var(--font-body);
+    background: var(--ivory);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  h1,h2,h3{
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 26px;
+    border-radius: 3px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration:none;
+    transition: transform .15s ease, background .2s ease, border-color .2s ease, color .2s ease;
+    white-space: nowrap;
+  }
+  .btn:active{ transform: translateY(1px); }
+  .btn-primary{
+    background: var(--amber);
+    color: #1B1200;
+  }
+  .btn-primary:hover{ background: var(--amber-dark); }
+  .btn-ghost-dark{
+    border-color: var(--line-dark);
+    color: var(--paper);
+    background: transparent;
+  }
+  .btn-ghost-dark:hover{ border-color: var(--paper); }
+  .btn-ghost-light{
+    border-color: var(--ink);
+    color: var(--ink);
+    background: transparent;
+  }
+  .btn-ghost-light:hover{ background: var(--ink); color: var(--paper); }
+  .btn-block{ width:100%; }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 500;
+    background: rgba(36,38,42,0.82);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .site-header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height: 74px;
+  }
+  .logo{
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--paper);
+    letter-spacing: 0.01em;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .logo .mark{
+    width: 26px; height: 18px;
+    display:inline-block;
+    position:relative;
+  }
+  .logo .mark span{
+    position:absolute; left:0; right:0; height:3px;
+    background: var(--amber);
+    border-radius:1px;
+  }
+  .logo .mark span:nth-child(1){ top:0; }
+  .logo .mark span:nth-child(2){ top:7px; }
+  .logo .mark span:nth-child(3){ top:14px; }
+
+  .main-nav{
+    display:flex;
+    align-items:center;
+    gap: 30px;
+  }
+  .main-nav a{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--paper);
+    text-decoration:none;
+    opacity:0.85;
+  }
+  .main-nav a:hover{ opacity:1; }
+  .header-actions{ display:flex; align-items:center; gap:16px; }
+  .header-phone{
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .nav-toggle{ display:none; }
+
+  @media (max-width: 900px){
+    .main-nav{ display:none; }
+    .header-phone span.label{ display:none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: #0f1012;
+  }
+  .hero-photo{
+    position:absolute; inset:0;
+    background-image: url('https://images.unsplash.com/photo-1696846912973-3233cc80bf86?w=1800&q=80&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 70%;
+    filter: brightness(0.55) saturate(0.9);
+    transition: filter .1s linear;
+  }
+  .hero-scrim{
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(15,16,18,0.55) 0%, rgba(15,16,18,0.15) 38%, rgba(15,16,18,0.75) 100%);
+  }
+
+  .louver-roof{
+    position:absolute;
+    top:0; left:0; right:0;
+    height: 46%;
+    display:flex;
+    flex-direction:column;
+    gap: 3px;
+    padding: 74px 0 0 0;
+    perspective: 900px;
+    z-index: 2;
+  }
+  .blade{
+    flex:1;
+    min-height: 0;
+    background: linear-gradient(180deg, #55575c 0%, #33353a 55%, #202124 100%);
+    transform-origin: 50% 50%;
+    transform: rotateX(4deg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    transition: transform 0.05s linear, box-shadow .2s ease;
+    border-top: 1px solid rgba(255,255,255,0.14);
+  }
+
+  .hero-content{
+    position: relative;
+    z-index: 3;
+    padding: 40px 0 56px;
+  }
+  .hero-content .eyebrow{ color: var(--amber); }
+  .hero-content h1{
+    color: var(--paper);
+    font-size: clamp(38px, 6vw, 74px);
+    line-height: 1.02;
+    margin: 14px 0 18px;
+    max-width: 15ch;
+  }
+  .hero-content p.lede{
+    color: rgba(250,247,241,0.86);
+    font-size: 18px;
+    max-width: 46ch;
+    margin: 0 0 30px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom: 44px; }
+
+  .louver-control{
+    max-width: 460px;
+    background: rgba(36,38,42,0.55);
+    border: 1px solid var(--line-dark);
+    border-radius: 6px;
+    padding: 16px 20px 18px;
+    backdrop-filter: blur(6px);
+  }
+  .louver-control-top{
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: rgba(250,247,241,0.75);
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+  }
+  .louver-control-top #louver-readout{ color: var(--amber); font-weight:600; }
+  input#louver-slider{
+    -webkit-appearance:none;
+    appearance:none;
+    width:100%;
+    height: 4px;
+    border-radius: 3px;
+    background: var(--line-dark);
+    outline:none;
+    cursor: pointer;
+  }
+  input#louver-slider::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width: 20px; height:20px;
+    border-radius:50%;
+    background: var(--amber);
+    border: 3px solid var(--paper);
+    cursor:pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  }
+  input#louver-slider::-moz-range-thumb{
+    width: 20px; height:20px;
+    border-radius:50%;
+    background: var(--amber);
+    border: 3px solid var(--paper);
+    cursor:pointer;
+  }
+  .louver-control-labels{
+    display:flex; justify-content:space-between;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(250,247,241,0.55);
+    margin-top:8px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ---------- Trust bar ---------- */
+  .trust-bar{
+    background: var(--graphite-2);
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .trust-bar .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 14px 40px;
+    padding: 20px 28px;
+    justify-content: space-between;
+  }
+  .trust-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color: var(--paper);
+    font-size: 14px;
+    font-weight:500;
+  }
+  .trust-item .dot{ width:6px; height:6px; border-radius:50%; background: var(--amber); flex:none; }
+
+  /* ---------- Sections generic ---------- */
+  .section{ padding: 108px 0; }
+  .section-dark{ background: var(--graphite); color: var(--paper); }
+  .section-light{ background: var(--ivory); color: var(--ink); }
+  .section-head{ max-width: 640px; margin-bottom: 62px; }
+  .section-head .eyebrow{ display:block; margin-bottom: 14px; }
+  .section-dark .eyebrow{ color: var(--amber); }
+  .section-light .eyebrow{ color: var(--amber-dark); }
+  .section-head h2{ font-size: clamp(30px, 4vw, 46px); line-height:1.08; }
+  .section-head p{ font-size: 17px; margin-top: 18px; opacity:0.82; max-width: 56ch; }
+
+  .reveal{ opacity:0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+
+  /* ---------- Technology section ---------- */
+  .tech-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line-dark);
+    border: 1px solid var(--line-dark);
+  }
+  .tech-card{
+    background: var(--graphite);
+    padding: 34px 26px 30px;
+  }
+  .tech-card .tech-index{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--amber);
+    letter-spacing: 0.08em;
+  }
+  .tech-card h3{
+    font-size: 19px;
+    margin: 22px 0 10px;
+    color: var(--paper);
+  }
+  .tech-card p{ font-size: 14.5px; opacity:0.78; margin:0; }
+  .tech-icon{ width: 34px; height:34px; margin-top:20px; }
+
+  @media (max-width: 980px){
+    .tech-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px){
+    .tech-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 190px;
+    gap: 14px;
+  }
+  .gallery-item{
+    position:relative;
+    grid-column: span 3;
+    border-radius: 4px;
+    overflow:hidden;
+    background-size:cover;
+    background-position:center;
+  }
+  .gallery-item.g-wide{ grid-column: span 4; }
+  .gallery-item.g-narrow{ grid-column: span 2; }
+  .gallery-item.g-tall{ grid-row: span 2; }
+  .gallery-caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding: 14px 16px;
+    background: linear-gradient(0deg, rgba(20,20,20,0.78), rgba(20,20,20,0));
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  @media (max-width: 900px){
+    .gallery-grid{ grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
+    .gallery-item, .gallery-item.g-wide, .gallery-item.g-narrow{ grid-column: span 1; }
+    .gallery-item.g-tall{ grid-row: span 1; }
+  }
+
+  /* ---------- Process ---------- */
+  .process-list{ display:flex; flex-direction:column; }
+  .process-row{
+    display:grid;
+    grid-template-columns: 120px 1fr 1.4fr;
+    gap: 30px;
+    align-items:start;
+    padding: 32px 0;
+    border-top: 1px solid var(--line-dark);
+  }
+  .process-row:last-child{ border-bottom: 1px solid var(--line-dark); }
+  .process-blade{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+  }
+  .process-row h3{ font-size: 22px; color: var(--paper); }
+  .process-row p{ opacity:0.78; font-size: 15px; margin:0; max-width: 46ch; }
+  @media (max-width: 780px){
+    .process-row{ grid-template-columns: 1fr; gap: 10px; }
+  }
+
+  /* ---------- Service area ---------- */
+  .area-layout{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items:center;
+  }
+  .area-states{ display:flex; flex-direction:column; gap: 0; }
+  .area-state{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding: 22px 0;
+    border-top: 1px solid var(--line-light);
+  }
+  .area-state:last-child{ border-bottom: 1px solid var(--line-light); }
+  .area-state .name{ font-family: var(--font-display); font-weight:700; font-size: 24px; }
+  .area-state .detail{ font-family: var(--font-mono); font-size: 13px; opacity:0.6; }
+  .area-map{
+    aspect-ratio: 1 / 1;
+    background: var(--graphite);
+    border-radius: 6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 30px;
+  }
+  @media (max-width: 860px){
+    .area-layout{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .testi-card{
+    background: var(--paper);
+    border: 1px solid var(--line-light);
+    border-radius: 6px;
+    padding: 30px 26px;
+  }
+  .testi-card .stars{ color: var(--amber); font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+  .testi-card p.quote{ font-size: 15.5px; line-height:1.6; margin: 0 0 18px; }
+  .testi-card .who{ font-family: var(--font-mono); font-size: 12.5px; opacity:0.65; }
+  @media (max-width: 860px){ .testi-grid{ grid-template-columns: 1fr; } }
+
+  /* ---------- Quote form ---------- */
+  .quote-section{ background: var(--graphite); color: var(--paper); position:relative; overflow:hidden;}
+  .quote-layout{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items:start;
+  }
+  .quote-intro h2{ font-size: clamp(30px, 4vw, 44px); color:var(--paper); }
+  .quote-intro p{ opacity:0.8; font-size: 16px; margin-top: 18px; max-width: 42ch; }
+  .quote-contact-list{ margin-top: 36px; display:flex; flex-direction:column; gap:16px; }
+  .quote-contact-item{ display:flex; gap:12px; align-items:center; font-size:15px;}
+  .quote-contact-item .ico{ color:var(--amber); font-family:var(--font-mono); }
+
+  form#quote-form{
+    background: var(--graphite-2);
+    border: 1px solid var(--line-dark);
+    border-radius: 8px;
+    padding: 34px;
+  }
+  .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom:18px; }
+  .form-field{ display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+  .form-field label{ font-size: 13px; font-family: var(--font-mono); color: rgba(250,247,241,0.75); letter-spacing:0.03em; }
+  .form-field input, .form-field select, .form-field textarea{
+    background: var(--graphite);
+    border: 1px solid var(--line-dark);
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: 15px;
+    outline:none;
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{
+    border-color: var(--amber);
+  }
+  .form-field textarea{ resize: vertical; min-height: 96px; }
+  .form-note{ font-size: 12.5px; opacity:0.55; margin-top:14px; }
+  #form-status{ margin-top:16px; font-size:14px; font-family: var(--font-mono); }
+  #form-status.ok{ color: #8FD19E; }
+  #form-status.err{ color: #E8917A; }
+
+  @media (max-width: 900px){
+    .quote-layout{ grid-template-columns: 1fr; }
+    .form-row{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ background: #1B1C1F; color: rgba(250,247,241,0.75); padding: 64px 0 28px; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .footer-grid h4{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color: var(--paper);
+    margin: 0 0 18px;
+  }
+  .footer-grid ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+  .footer-grid a{ text-decoration:none; font-size:14px; color: rgba(250,247,241,0.75); }
+  .footer-grid a:hover{ color: var(--amber); }
+  .footer-brand p{ font-size:14px; max-width: 34ch; margin-top:14px; }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    padding-top: 24px;
+    font-size: 12.5px;
+    opacity:0.55;
+  }
+  @media (max-width: 780px){
+    .footer-grid{ grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ---------- Sticky mobile bar ---------- */
+  .mobile-bar{
+    display:none;
+    position: fixed;
+    bottom:0; left:0; right:0;
+    z-index: 400;
+    background: var(--graphite);
+    border-top: 1px solid var(--line-dark);
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .mobile-bar .btn{ flex:1; padding: 13px 10px; font-size:14px; }
+  @media (max-width: 720px){
+    .mobile-bar{ display:flex; }
+    body{ padding-bottom: 66px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="mark"><span></span><span></span><span></span></span>
+      pergolette
+    </a>
+    <nav class="main-nav">
+      <a href="#technology">Technology</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#process">Process</a>
+      <a href="#service-area">Service Area</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+18042979999"><span>&#9742;</span><span class="label">(804) 297-9999</span></a>
+      <a href="#quote" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-photo"></div>
+  <div class="hero-scrim"></div>
+
+  <div class="louver-roof" id="louver-roof">
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+    <div class="blade"></div>
+  </div>
+
+  <div class="hero-content wrap">
+    <span class="eyebrow">Motorized Louvered Pergolas</span>
+    <h1>Your patio, on your schedule.</h1>
+    <p class="lede">Open the roof for sun. Close it before the rain hits. Pergolette designs, builds, and installs custom motorized pergolas from our home base in Powhatan, VA — serving families across Virginia, Maryland, and North Carolina.</p>
+    <div class="hero-ctas">
+      <a href="#quote" class="btn btn-primary">Get My Free Quote</a>
+      <a href="tel:+18042979999" class="btn btn-ghost-dark">Call (804) 297-9999</a>
+    </div>
+
+    <div class="louver-control">
+      <div class="louver-control-top">
+        <span>DRAG TO OPEN THE ROOF</span>
+        <span id="louver-readout">40% OPEN</span>
+      </div>
+      <input type="range" id="louver-slider" min="0" max="100" value="40">
+      <div class="louver-control-labels">
+        <span>CLOSED</span>
+        <span>OPEN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="wrap">
+    <div class="trust-item"><span class="dot"></span>Family-owned, based in Powhatan, VA</div>
+    <div class="trust-item"><span class="dot"></span>Serving VA &middot; MD &middot; NC</div>
+    <div class="trust-item"><span class="dot"></span>Custom-engineered aluminum frames</div>
+    <div class="trust-item"><span class="dot"></span>Free on-site design consultation</div>
+  </div>
+</div>
+
+<section class="section section-dark" id="technology">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Technology</span>
+      <h2>One remote. Total control of your outdoor space.</h2>
+      <p>Every Pergolette pergola is built around a motorized louvered roof — aluminum blades that rotate up to 170&deg; at the touch of a button, so your patio adapts to whatever the day brings.</p>
+    </div>
+
+    <div class="tech-grid reveal">
+      <div class="tech-card">
+        <span class="tech-index">01</span>
+        <svg class="tech-icon" viewBox="0 0 34 34" fill="none"><rect x="4" y="8" width="26" height="3" rx="1.5" fill="#D98C3D"/><rect x="4" y="15.5" width="26" height="3" rx="1.5" fill="#D98C3D" opacity="0.7"/><rect x="4" y="23" width="26" height="3" rx="1.5" fill="#D98C3D" opacity="0.45"/></svg>
+        <h3>Rotating Louvers</h3>
+        <p>Turn the roof panels from fully open to fully closed in seconds — full sun, full shade, or anywhere in between.</p>
+      </div>
+      <div class="tech-card">
+        <span class="tech-index">02</span>
+        <svg class="tech-icon" viewBox="0 0 34 34" fill="none"><path d="M17 4 C10 12, 8 17, 8 21 a9 9 0 0 0 18 0 c0 -4, -2 -9, -9 -17Z" stroke="#D98C3D" stroke-width="2.2"/></svg>
+        <h3>Weather Sensors</h3>
+        <p>Wind and rain sensors close the louvers automatically the moment conditions change, even when you're not home.</p>
+      </div>
+      <div class="tech-card">
+        <span class="tech-index">03</span>
+        <svg class="tech-icon" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="14" r="8" stroke="#D98C3D" stroke-width="2.2"/><path d="M13 26h8M14.5 29h5" stroke="#D98C3D" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <h3>Integrated Lighting</h3>
+        <p>Built-in LED strips along the frame light up your evenings, from quiet dinners to backyard gatherings.</p>
+      </div>
+      <div class="tech-card">
+        <span class="tech-index">04</span>
+        <svg class="tech-icon" viewBox="0 0 34 34" fill="none"><rect x="6" y="6" width="22" height="22" rx="2" stroke="#D98C3D" stroke-width="2.2"/><path d="M6 13h22M6 20h22" stroke="#D98C3D" stroke-width="1.6" opacity="0.6"/></svg>
+        <h3>Retractable Screens</h3>
+        <p>Drop-down side screens add privacy and keep bugs out, retracting again with a single button when you don't need them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Recent Work</span>
+      <h2>Outdoor spaces built to live in, not just look at.</h2>
+      <p>A sample of the patios, decks, and outdoor kitchens we've covered across the region. Ask us for more examples near you at your consultation.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item g-wide g-tall" style="background-image:url('https://images.unsplash.com/photo-1696846911635-83b97e53fb65?w=1200&q=80&auto=format&fit=crop')">
+        <div class="gallery-caption">Residential Install &mdash; Midlothian, VA</div>
+      </div>
+      <div class="gallery-item g-narrow" style="background-image:url('https://images.unsplash.com/photo-1530491396055-5aca4203edbf?w=900&q=80&auto=format&fit=crop')">
+        <div class="gallery-caption">Aluminum Frame Detail</div>
+      </div>
+      <div class="gallery-item g-narrow" style="background-image:url('https://images.unsplash.com/photo-1502258738801-89e429b20da3?w=900&q=80&auto=format&fit=crop')">
+        <div class="gallery-caption">Structural Posts</div>
+      </div>
+      <div class="gallery-item g-wide" style="background-image:url('https://images.unsplash.com/photo-1696846912293-9a8013e17403?w=1200&q=80&auto=format&fit=crop')">
+        <div class="gallery-caption">Covered Patio &mdash; Glen Allen, VA</div>
+      </div>
+      <div class="gallery-item g-narrow" style="background-image:url('https://images.unsplash.com/photo-1602774895672-b553538bceb9?w=900&q=80&auto=format&fit=crop')">
+        <div class="gallery-caption">Poolside Shade &mdash; Richmond, VA</div>
+      </div>
+      <div class="gallery-item g-narrow" style="background-image:url('https://images.unsplash.com/photo-1580469322701-45b34d5e6e9b?w=900&q=80&auto=format&fit=crop')">
+        <div class="gallery-caption">Dining Under Cover</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>From first call to first dinner outside.</h2>
+      <p>Most residential installs go from consultation to finished pergola in under three weeks.</p>
+    </div>
+
+    <div class="process-list reveal">
+      <div class="process-row">
+        <div class="process-blade">BLADE&nbsp;01</div>
+        <h3>Consult</h3>
+        <p>We visit your property, measure the space, and talk through how you actually want to use it — dining, lounging, hosting, or all three.</p>
+      </div>
+      <div class="process-row">
+        <div class="process-blade">BLADE&nbsp;02</div>
+        <h3>Design</h3>
+        <p>You'll see a rendering matched to your home before anything is ordered, and choose your frame color, louver finish, and add-ons.</p>
+      </div>
+      <div class="process-row">
+        <div class="process-blade">BLADE&nbsp;03</div>
+        <h3>Install</h3>
+        <p>Our crew handles footings, framing, and wiring on site. Most residential pergolas are fully installed in two to three days.</p>
+      </div>
+      <div class="process-row">
+        <div class="process-blade">BLADE&nbsp;04</div>
+        <h3>Enjoy</h3>
+        <p>We walk you through the remote and app before we leave, so you're opening and closing your roof the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="service-area">
+  <div class="wrap">
+    <div class="area-layout">
+      <div class="reveal">
+        <span class="eyebrow">Where We Work</span>
+        <h2 style="font-size:clamp(30px,4vw,46px); margin-top:14px;">Based in Powhatan. At home across the Mid-Atlantic.</h2>
+        <p style="margin-top:18px; opacity:0.8; font-size:16px; max-width:44ch;">We design and install on-site rather than shipping a kit, which is why we keep our service area within a comfortable drive of Powhatan, VA.</p>
+
+        <div class="area-states" style="margin-top:34px;">
+          <div class="area-state">
+            <span class="name">Virginia</span>
+            <span class="detail">Home base &middot; Richmond, Henrico, Powhatan &amp; beyond</span>
+          </div>
+          <div class="area-state">
+            <span class="name">Maryland</span>
+            <span class="detail">Southern &amp; Central MD</span>
+          </div>
+          <div class="area-state">
+            <span class="name">North Carolina</span>
+            <span class="detail">Northern NC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="area-map reveal">
+        <svg viewBox="0 0 300 300" width="100%" height="100%">
+          <circle cx="150" cy="150" r="120" stroke="#4F7B82" stroke-width="1" fill="none" opacity="0.4"/>
+          <circle cx="150" cy="150" r="80" stroke="#4F7B82" stroke-width="1" fill="none" opacity="0.55"/>
+          <circle cx="150" cy="150" r="40" stroke="#D98C3D" stroke-width="1.5" fill="none"/>
+          <circle cx="150" cy="150" r="5" fill="#D98C3D"/>
+          <text x="150" y="130" text-anchor="middle" fill="#FAF7F1" font-family="IBM Plex Mono" font-size="11" letter-spacing="1">POWHATAN, VA</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" id="reviews" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What Homeowners Say</span>
+      <h2>Reviews from recent installs.</h2>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">We use our patio almost every night now, even when it's drizzling. The remote makes it stupid simple.</p>
+        <div class="who">— Homeowner, Midlothian, VA</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">Install crew was on time both days and cleaned up completely. The lighting built into the frame was worth every penny.</p>
+        <div class="who">— Homeowner, Glen Allen, VA</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">The design walkthrough matched exactly what got built. No surprises, no upsells at the door.</p>
+        <div class="who">— Homeowner, Richmond, VA</div>
+      </div>
+    </div>
+    <p style="font-family:var(--font-mono); font-size:12px; opacity:0.5; margin-top:24px;">Placeholder reviews — swap in your real customer quotes before launch.</p>
+  </div>
+</section>
+
+<section class="section quote-section" id="quote">
+  <div class="wrap">
+    <div class="quote-layout">
+      <div class="quote-intro reveal">
+        <span class="eyebrow" style="color:var(--amber);">Get A Free Quote</span>
+        <h2 style="margin-top:14px;">Tell us about your space.</h2>
+        <p>Share a few details and we'll follow up to schedule your free on-site consultation — usually within one business day.</p>
+
+        <div class="quote-contact-list">
+          <div class="quote-contact-item"><span class="ico">&#9742;</span> <a href="tel:+18042979999">(804) 297-9999</a></div>
+          <div class="quote-contact-item"><span class="ico">&#9993;</span> <a href="mailto:hello@pergolette.com">hello@pergolette.com</a></div>
+          <div class="quote-contact-item"><span class="ico">&#9679;</span> Powhatan, VA &middot; Serving VA, MD &amp; NC</div>
+        </div>
+      </div>
+
+      <form id="quote-form" class="reveal">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-name">Full name</label>
+            <input type="text" id="f-name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="f-phone">Phone</label>
+            <input type="tel" id="f-phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="f-city">City / State</label>
+            <input type="text" id="f-city" name="city" placeholder="e.g. Powhatan, VA" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-type">Property type</label>
+            <select id="f-type" name="propertyType">
+              <option>Residential</option>
+              <option>Commercial</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="f-contact">Preferred contact method</label>
+            <select id="f-contact" name="preferredContact">
+              <option>Phone</option>
+              <option>Email</option>
+              <option>Either</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="f-message">Tell us about your project</label>
+          <textarea id="f-message" name="message" placeholder="Patio size, timeline, anything you have in mind..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send My Request</button>
+        <p class="form-note">We reply to every request personally — no spam, no shared lists.</p>
+        <div id="form-status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" style="font-size:20px;">
+          <span class="mark"><span></span><span></span><span></span></span>
+          pergolette
+        </a>
+        <p>Motorized pergolas and outdoor living solutions, designed and installed across Virginia, Maryland, and North Carolina.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Service Area</h4>
+        <ul>
+          <li>Virginia</li>
+          <li>Maryland</li>
+          <li>North Carolina</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+18042979999">(804) 297-9999</a></li>
+          <li><a href="mailto:hello@pergolette.com">hello@pergolette.com</a></li>
+          <li><a href="https://www.instagram.com/365pergola/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Pergolette. All rights reserved.</span>
+      <span>Powhatan, VA</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+18042979999" class="btn btn-ghost-dark" style="color:var(--paper); border-color:var(--line-dark);">Call Now</a>
+  <a href="#quote" class="btn btn-primary">Get a Quote</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Interactive louver hero control
+  (function(){
+    var slider = document.getElementById('louver-slider');
+    var readout = document.getElementById('louver-readout');
+    var blades = document.querySelectorAll('#louver-roof .blade');
+    var photo = document.querySelector('.hero-photo');
+
+    function update(val){
+      var pct = Number(val);
+      readout.textContent = pct + '% OPEN';
+      // rotate blades from 4deg (closed) to 82deg (open)
+      var angle = 4 + (pct/100) * 78;
+      blades.forEach(function(b, i){
+        b.style.transform = 'rotateX(' + angle + 'deg)';
+      });
+      // brighten background as roof opens
+      var brightness = 0.55 + (pct/100) * 0.35;
+      photo.style.filter = 'brightness(' + brightness.toFixed(2) + ') saturate(0.95)';
+    }
+
+    slider.addEventListener('input', function(){ update(this.value); });
+    update(slider.value);
+  })();
+
+  // Scroll reveal
+  (function(){
+    var items = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){
+      items.forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function(el){ io.observe(el); });
+  })();
+
+  // Quote form submission -> Google Apps Script Web App
+  (function(){
+    var SCRIPT_URL = 'PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE';
+    var form = document.getElementById('quote-form');
+    var status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      status.textContent = 'Sending...';
+      status.className = '';
+
+      var payload = {
+        name: form.name.value,
+        phone: form.phone.value,
+        email: form.email.value,
+        city: form.city.value,
+        propertyType: form.propertyType.value,
+        preferredContact: form.preferredContact.value,
+        message: form.message.value,
+        submittedAt: new Date().toISOString()
+      };
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        redirect: 'follow',
+        body: JSON.stringify(payload)
+      })
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        status.textContent = "Thanks — we'll be in touch within one business day.";
+        status.className = 'ok';
+        form.reset();
+      })
+      .catch(function(err){
+        status.textContent = 'Something went wrong. Please call us at (804) 297-9999 instead.';
+        status.className = 'err';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
